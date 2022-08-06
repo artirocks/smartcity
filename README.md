@@ -36,6 +36,8 @@
 * [Ganache GUI](https://trufflesuite.com/ganache/)
 * [MetaMask](https://metamask.io/)
 
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20200619214524/Tech-Stack-used-for-developing-dApps.png)
+
 
 <br/>
 
@@ -51,7 +53,10 @@ $ npm install
 Open the Ganache GUI client that you downloaded and installed. This will start your local blockchain instance. You can also use other local blockchains.
 
 ## Step 4. Compile & Deploy Election Smart Contract
-`$ truffle migrate --reset`
+```
+$truffle compile
+$truffle migrate --reset
+```
 You must migrate the verification smart contract each time your restart ganache.
 
 ## Step 5. Configure Metamask
