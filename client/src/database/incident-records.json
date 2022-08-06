@@ -1,0 +1,97 @@
+[
+    {
+        "id":50998,
+        "incidentDate":"24/06/22",
+        "incidentTime":"13:08:22",
+        "genuineFalse":"Genuine",
+        "incidentDescription":"Two Dogs Needed to be Saved!",
+        "timeToResolve":"20 minutes",
+        "resolvedBy":"Mrs. Ravali",
+        "coinsEarned":"5",
+        "numEscalations":"1"
+    },
+    {
+        "id":50987,
+        "incidentDate":"21/06/22",
+        "incidentTime":"00:08:22",
+        "genuineFalse":"False",
+        "incidentDescription":"False Deforestation going on.",
+        "timeToResolve":"40 minutes",
+        "resolvedBy":"Mrs. Ravali",
+        "coinsEarned":"9",
+        "numEscalations":"1"
+
+    },
+    {
+        "id":48667,
+        "incidentDate":"19/05/22",
+        "incidentTime":"21:18:46",
+        "genuineFalse":"Genuine",
+        "incidentDescription":"Car parked in no parking",
+        "timeToResolve":"90 minutes",
+        "resolvedBy":"Mrs. Ravali",
+        "coinsEarned":"12",
+        "numEscalations":"1"
+
+    },
+    {
+        "id":30899,
+        "incidentDate":"01/05/22",
+        "incidentTime":"02:16:12",
+        "genuineFalse":"Genuine",
+        "incidentDescription":"A group of monkeys trapped in lake area",
+        "timeToResolve":"120 minutes",
+        "resolvedBy":"Mrs. Ravali",
+        "coinsEarned":"22",
+        "numEscalations":"1"
+
+    },
+    {
+        "id":27895,
+        "incidentDate":"29/04/22",
+        "incidentTime":"11:29:44",
+        "genuineFalse":"Genuine",
+        "incidentDescription":"Two Dogs Needed to be Saved!",
+        "timeToResolve":"230 minutes",
+        "resolvedBy":"Mrs. Ravali",
+        "coinsEarned":"19",
+        "numEscalations":"1"
+
+    },
+    {
+        "id":24877,
+        "incidentDate":"27/04/22",
+        "incidentTime":"21:44:09",
+        "genuineFalse":"False",
+        "incidentDescription":"Old man needs assistance.",
+        "timeToResolve":"2566 minutes",
+        "resolvedBy":"Mrs. Ravali",
+        "coinsEarned":"21",
+        "numEscalations":"1"
+
+    },
+    {
+        "id":22337,
+        "incidentDate":"20/04/22",
+        "incidentTime":"22:32:49",
+        "genuineFalse":"False",
+        "incidentDescription":"Power failure in local area due to transformer break",
+        "timeToResolve":"1002 minutes",
+        "resolvedBy":"Mrs. Ravali",
+        "coinsEarned":"7",
+        "numEscalations":"1"
+
+    },
+    {
+        "id":12332,
+        "incidentDate":"14/04/22",
+        "incidentTime":"13:48:51",
+        "genuineFalse":"Genuine",
+        "incidentDescription":"Public menance",
+        "timeToResolve":"3434 minutes",
+        "resolvedBy":"Mrs. Ravali",
+        "coinsEarned":"99",
+        "numEscalations":"1"
+
+    }
+]

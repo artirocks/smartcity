@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/3.41/esri/copyright.txt for details.
+//>>built
+define("esri/tasks/ProjectParameters","dojo/_base/declare dojo/_base/lang dojo/_base/array dojo/_base/json dojo/has ../kernel ../lang ../geometry/jsonUtils".split(" "),function(b,d,e,c,f,g,h,k){b=b(null,{declaredClass:"esri.tasks.ProjectParameters",geometries:null,outSR:null,transformation:null,transformForward:null,toJson:function(){var m=e.map(this.geometries,function(l){return l.toJson()}),a={};a.outSR=this.outSR.wkid||c.toJson(this.outSR.toJson());a.inSR=this.geometries[0].spatialReference.wkid||
+c.toJson(this.geometries[0].spatialReference.toJson());a.geometries=c.toJson({geometryType:k.getJsonType(this.geometries[0]),geometries:m});this.transformation&&(a.transformation=this.transformation.wkid||c.toJson(this.transformation));h.isDefined(this.transformForward)&&(a.transformForward=this.transformForward);return a}});f("extend-esri")&&d.setObject("tasks.ProjectParameters",b,g);return b});

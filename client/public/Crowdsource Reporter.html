@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://www.arcgis.com/apps/CrowdsourceReporter/index.html# -->
+<html class="dj_webkit dj_chrome dj_contentbox esriLTR" dir="ltr" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Crowdsource Reporter</title>
+    <!--
+     | Copyright 2015 Esri
+     |
+     | Licensed under the Apache License, Version 2.0 (the "License");
+     | you may not use this file except in compliance with the License.
+     | You may obtain a copy of the License at
+     |
+     |    http://www.apache.org/licenses/LICENSE-2.0
+     |
+     | Unless required by applicable law or agreed to in writing, software
+     | distributed under the License is distributed on an "AS IS" BASIS,
+     | WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     | See the License for the specific language governing permissions and
+     | limitations under the License.
+    -->
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- End Responsive -->
+    <!-- google plus -->
+    <meta name="google-signin-clientid" content="CLIENT_ID">
+    <meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login">
+    <meta name="google-signin-requestvisibleactions" content="http://schema.org/AddAction">
+    <meta name="google-signin-cookiepolicy" content="single_host_origin">
+    <!-- google plus -->
+    <!-- Latest compiled and minified CSS -->
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="./Crowdsource Reporter_files/bootstrap.min.css">
+    <!-- Bootstrap RTL CSS -->
+    
+    <!-- Fontawsome icons -->
+    <link rel="stylesheet" type="text/css" href="./Crowdsource Reporter_files/font-awsome.min.css">
+    <!-- Bootstrap DateTimePicker CSS  -->
+    <link rel="stylesheet" type="text/css" href="./Crowdsource Reporter_files/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="./Crowdsource Reporter_files/bootstrap-datetimepicker-standalone.min.css">
+    <!-- Bootstrap TouchSpinner CSS -->
+    <link rel="stylesheet" type="text/css" href="./Crowdsource Reporter_files/jquery.bootstrap-touchspin.min.css">
+    <!--Dojo and Esri CSS-->
+    <link rel="stylesheet" href="./Crowdsource Reporter_files/claro.css">
+    <link rel="stylesheet" href="./Crowdsource Reporter_files/esri.css">
+    <!-- Load any application specific styles -->
+    <link rel="stylesheet" href="./Crowdsource Reporter_files/main.css" type="text/css">
+    <link rel="stylesheet" href="./Crowdsource Reporter_files/common.css" type="text/css">
+    <link rel="stylesheet" href="./Crowdsource Reporter_files/mediaqueries.css" type="text/css">
+    <link rel="stylesheet" href="./Crowdsource Reporter_files/font-icon-styles.css" type="text/css">
+    <!-- Add Legacy browsers css -->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet"  type="text/css" href="css/legacy-browsers.css" />
+  <![endif]-->
+<link rel="shortcut icon" type="image/x-icon" href="https://www.arcgis.com/apps/CrowdsourceReporter/images/favicon.ico"><link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://www.arcgis.com/apps/CrowdsourceReporter/images/favicon.ico"><link rel="apple-touch-icon" type="image/x-icon" href="https://www.arcgis.com/apps/CrowdsourceReporter/images/favicon.ico"><style type="text/css">
+
+.esriCTApplicationColor
+{
+    color: #137DB9;
+}
+
+.esriCTBGColor ,.esriCTMobileBurgerIcon span, .esriCTMobileBurgerIcon span:before, .esriCTMobileBurgerIcon span:after
+{
+    background-color: #137DB9;
+}
+
+.esriCTBorder, .esriCTBorderLeft, .esriCTBorderTop, .esriCTBorderRight, .esriCTBorderBottom
+{
+    border-color: #137DB9;
+}
+
+/* Overriden Styles */
+
+.btn-default:hover, .btn-default:focus, .btn-default:focus {
+     background-color: #fff;
+     border-color: #ccc;
+     color: #137DB9;
+}
+
+.btn-default:active
+{
+    background-color: #137DB9;
+    color: #fff;
+}
+
+.esriCTSubmitButton, .esriCTDetailButtonSelected, .esriCTPostCommentButton {
+  color: #FFF !important;
+  background-color: #137DB9 !important;
+}
+
+.esriCTSubmitButton .btn-default:hover, .esriCTPostCommentButton .btn-default:hover{
+  color: #FFF !important;
+  background-color: #137DB9 !important;
+}
+/* End of Overriden Styles */
+
+/** Org theming classes starts **/
+
+/** Common classes starts **/
+.esriCTBodyBackgroundColor {
+    background-color: #fff !important;
+}
+
+.esriCTCalculatedBodyBackgroundColor {
+    background-color: #f0f0f0 !important;
+}
+
+.esriCTBodyTextColor {
+    color: #515151 !important;
+}
+
+.esriCTCalculatedBodyTextColor {
+    color: #878787 !important;
+}
+
+.esriCTHeaderBackgroundColor {
+    background-color: #fff !important;
+}
+
+.esriCTCalculatedHeaderBackgroundColor {
+    background-color: #d1d1d1 !important;
+}
+
+.esriCTHeaderTextColor {
+    color: #137DB9 !important;
+}
+
+.esriCTCalculatedHeaderTextColor {
+    color: #67beef !important;
+}
+
+.esriCTButtonBackgroundColor {
+    background-color: #fff !important;
+}
+
+.esriCTButtonTextColor {
+    color: #137DB9 !important;
+}
+
+.esriCTHeaderTextColorAsBorder {
+    border-color: #137DB9 !important;
+}
+
+.esriCTHeaderTextColorAsBackground {
+    background-color: #137DB9 !important;
+}
+
+.esriCTHeaderBackgroundColorAsTextColor {
+    color: #fff !important;
+}
+
+.esriCTHeaderBackgroundColorAsBorder {
+    border-color: #fff !important;
+}
+
+.esriCTCalculatedBodyTextColorAsBackground {
+    background-color: #878787 !important;
+}
+
+.esriCTCalculatedBodyTextColorAsBorder {
+    border-color: #878787 !important;
+}
+
+/** Common classes starts **/
+
+/** Webmap list panel starts **/
+
+.esriCTWebMapBorder {
+    border-bottom-width: 1px !important;
+    border-bottom-style: solid !important;
+    border-bottom-color: #878787 !important;
+}
+
+.esriCTMultiLineEllipsisdiv {
+    color: #515151 !important;
+}
+
+.esriCTMultiLineEllipsisdiv .esriCTHeaderFont {
+    color: #515151 !important;
+}
+
+.esriCTWebMapLayerTitle {
+    color: #515151 !important;
+}
+
+.esriCTWebMapListWrapperContainer {
+    border-right-width: 1px !important;
+    border-right-style: solid !important;
+    border-right-color: #137DB9 !important;
+}
+
+.esriCTWebMapListContainer {
+    background-color: #fff !important;
+}
+
+.esriCTDisplayList, .esriCTDisplayWebMapTemplate:hover .esriCTWebMapbgColor {
+    background-color: #f0f0f0 !important;
+}
+
+.esriCTDisplayList, .esriCTDisplayWebMapTemplate:hover .esriCTMediaBody {
+    background-color: #f0f0f0 !important;
+}
+
+.esriCTDisplayList, .esriCTDisplayWebMapTemplate:hover .esriCTMultiLineFill {
+    background-color: #f0f0f0 !important;
+}
+
+.esriCTWebMapbgColor {
+    background-color: #f0f0f0 !important;
+}
+
+.esriCTDisplayList, .esriCTDisplayWebMapTemplate {
+    background-color: #fff !important;
+}
+
+.esriCTMediaBody {
+    background-color: #fff !important;
+}
+
+.esriCTWebMapLayer:hover {
+    background-color: #f0f0f0 !important;
+}
+
+.esriCTDescription {
+    color: #515151 !important;
+    background-color: #f0f0f0 !important;
+}
+
+.esriCTSelectedItem {
+    background-color: #f0f0f0 !important;
+}
+
+.esriCTMediaBorder {
+    border-color: #878787 !important;
+}
+
+/** Webmap list panel ends **/
+
+/** Issue list panel starts **/
+.esriCTItemList .esriCTItemSummary:hover, .esriCTItemSummaryParentSelected {
+    background-color: #f0f0f0 !important;
+}
+
+.esriCTItemSummarySelected {
+     background-color: #137DB9 !important;
+}
+
+.esriCTBackButton {
+ background-color: rgba(0, 0 , 0 , 0.30) !important;
+}
+
+.esriCTVotesDetails {
+    color : rgba(0, 0 , 0 , 0.30) !important;
+}
+
+.esriCTDetailButtonSelected {
+    color: #fff !important;
+    background-color: #137DB9 !important;
+}
+
+/** Issue list panel ends **/
+
+/** Item details panel starts **/
+
+/** Popup and comment  details starts **/
+
+.esriCTDetailDescription .esriViewPopup .hzLine,
+.esriCTCommentsPopup .esriViewPopup .hzLine {
+    border-top-color: #515151 !important;
+}
+
+.esriCTDetailDescription .esriViewPopup .mainSection .attrTable td.attrName,
+.esriCTCommentsPopup .esriViewPopup .mainSection .attrTable td.attrName,
+.esriCTNonEditableLayerParent .attrTable td.attrName {
+    color: #878787 !important;
+}
+
+.esriCTDetailDescription .esriViewPopup .mainSection .attrTable td,
+.esriCTCommentsPopup .esriViewPopup .mainSection .attrTable td {
+    color: #515151 !important;
+}
+
+.esriCTDetailDescription .esriViewPopup .header,
+.esriCTCommentsPopup .esriViewPopup .header {
+    color: #515151 !important;
+}
+
+.esriCTPostCommentButton, .esriCTPostCommentButton:hover,
+.esriCTGeoFormSubmitButton , .esriCTGeoFormSubmitButton :hover, .modal-footer .esriCTOkButton
+{
+      background-color: #137DB9 !important;
+      color: #fff !important;
+}
+
+.esriCTCancelCommentButton, .esriCTCancelCommentButton:hover,
+.esriCTGeoFormCancelButton , .esriCTGeoFormCancelButton :hover, .modal-footer .esriCTCancelButton
+{
+    background-color: #fff !important;
+    color: #137DB9 !important;
+}
+
+
+/** Popup and comment details ends **/
+
+/** Item details panel ends **/
+
+/** Org theming classes ends **/
+
+</style></head>
+<body class="claro using-mouse" data-new-gr-c-s-check-loaded="14.1073.0" data-gr-ext-installed="">
+    <div class="loading-indicator">
+    </div>
+    <div id="headerContainer" class="esriCTHeaderContainer" role="banner">
+    <div data-dojo-attach-point="applicationHeaderParentContainer" id="dijit__WidgetsInTemplateMixin_2" widgetid="dijit__WidgetsInTemplateMixin_2">
+    <div class="esriCTApplicationHeader esriCTBorderBottom esriCTHeaderBackgroundColor esriCTHeaderTextColorAsBorder">
+        <div tabindex="-1" class="esriCTHomeIcon" data-dojo-attach-point="applicationIconContainer">
+            <img data-dojo-attach-point="applicationHeaderIcon" class="esriCTApplicationIcon" alt="" src="./Crowdsource Reporter_files/app-icon.png">
+        </div>
+        <div role="heading" aria-level="1" data-dojo-attach-point="applicationHeaderName" class="esriCTAppName esriCTMenuTabLeft esriCTApplicationColor esriCTHeaderTextColor" aria-label="Crowdsource Reporter" style="width: calc(100% - 148px);">Crowdsource Reporter</div>
+        <div class="esriCTMenuTabRight">
+            <div data-dojo-attach-point="applicationHeaderWidgetsContainer">
+                <div class="esriCTDesktopIcons">
+                    <div class="esriCTUserControlContainer esriCTFloatLeft" data-dojo-attach-point="userControlContainer">
+                        <div data-dojo-attach-point="esriCTLoginDetailsDiv">
+                            <div class="esriCTLoginCredentialsDiv esriCTApplicationColor esriCTHeaderTextColor esriCTFloatLeft" data-dojo-attach-point="esriCTLoginCredentialsDiv">
+                                <div class="esriCTFloatLeft" style="width: 100%;">
+                                    <div tabindex="0" role="link" class="esriCTLoginUserNameDiv esriCTPointerCursor" data-dojo-attach-point="esriCTLoginUserNameDiv" title="Sign in" aria-label="Sign in">
+                                        Sign In
+                                    </div>
+                                    <div class="esriCTCaretIcon  esriCTPointerCursor esriCTHidden esriCTHeaderTextColor" data-dojo-attach-point="caretIcon">
+                                        ▼</div>
+                                </div>
+                            </div>
+                            <div class="esriCTOptions esriCTApplicationColor esriCTHeaderTextColor esriCTHidden" data-dojo-attach-point="esriCTLoginOptionsDiv" style="right: 50px;">
+                                <div class="esriCTLogoutOption esriCTBorder esriCTHeaderTextColor esriCTHeaderBackgroundColor esriCTHeaderTextColorAsBorder">
+                                    <div role="menuitem" tabindex="0" data-dojo-attach-point="myIssueButton" class="esriCTHidden esriCTItems esriCTPointerCursor" title="View my submissions" aria-label="View my submissions">
+                                        My Submissions
+                                    </div>
+                                    <div role="menuitem" tabindex="0" data-dojo-attach-point="signOutButton" onclick="" class="esriCTHidden esriCTItems esriCTPointerCursor" title="Sign out" aria-label="Sign out">
+                                        Sign Out
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-dojo-attach-point="mobileIcons" class="esriCTMobileIconDiv">
+                    <div tabindex="0" title="Share" aria-label="Share" class="esriCTHidden esriCTFloatLeft esriCTShareIconParent esriCTMobileHelpIcon" role="button" data-dojo-attach-point="shareButton">
+                        <span aria-hidden="true" class="esriCTShareIcon esriCTPointerCursor icon icon-share esriCTHeaderTextColor">
+                        </span>
+                        <span class="esriCTFallBackText">Share</span>
+                    </div>
+                    <div tabindex="0" class="esriCTFloatLeft esriCTMobileHelpIcon" role="button" data-dojo-attach-point="helpButton" title="Help" aria-label="Help">
+                        <span aria-hidden="true" class="esriCTHelpIcon esriCTPointerCursor icon icon-help-1 esriCTHeaderTextColor">
+                        </span>
+                        <span class="esriCTFallBackText">Help</span>
+                    </div>
+                    <div role="menu" tabindex="0" aria-label="Hamburger" aria-expanded="false" data-dojo-attach-point="mobileMenuBurger" class="esriCTMobileBurgerIcon esriCTMobileIcons">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+    <div class="esriCTMainContainer" id="mainContainer" role="main">
+        <div id="noWebMapParentDiv" class="esriCTNoWebMapParentDiv esriCTHidden">
+            <div class="esriCTNoWebMapChildDiv">
+                <div tabindex="0" id="noWebMapChildDiv"></div>
+            </div>
+        </div>
+        <div class="esriCTFullHeightWidth" id="layoutContainer">
+            <div id="mapParentContainer" class="esriCTMapContainer">
+                <div class="esriCTListHeader esriCTBGColor esriCTHeaderBackgroundColorAsTextColor">
+                    <div tabindex="0" role="button" id="mapBackButton" title="Go to main list">
+                            <span aria-hidden="true" class="esriCTBackButton esriCTInvertFontIcons icon icon-left-arrow esriCTPointerCursor">
+                            </span>
+                            <span class="esriCTFallBackText" title="Go to main list"></span>
+                        </div>
+                    <div class="esriCTHeaderText esriCTMapHeaderText esriCTEllipsis" id="mapContainerTitle">Bird Observations</div>
+                    <div tabindex="0" role="button" id="toggleListViewButton" title="List view">
+                        <span aria-hidden="true" class="esriCTListViewButton esriCTPointerCursor icon icon-list">
+                        </span>
+                        <span class="esriCTFallBackText" title="List view"></span>
+                    </div>
+                </div>
+                <div id="mapContainer" class="esriCTMap">
+                    <!-- The ArcGIS API for JavaScript provides bidirectional support.  When viewing the application in an right to left (rtl) language like Hebrew and Arabic the map needs to remain in left-to-right (ltr) mode. Specify this by setting the dir attribute on the div to ltr. -->
+                    <div tabindex="0" role="application" id="mapDiv" dir="ltr" data-dojo-props="region:&#39;center&#39;" alt="Selected Map" class="map" data-zoom="5" data-scale="18489297.737236" data-loaded="" style="height: 582px; width: auto;"><div id="mapDiv_root" class="esriMapContainer" style="width: 1008px; height: 582px; direction: ltr;"><div id="mapDiv_container" class="esriMapContainer" style="position: absolute; cursor: default; touch-action: none; clip: auto;"><div id="mapDiv_layers" class="esriMapLayers" style="left: 0px; top: 0px;"><div id="mapDiv_defaultBasemap" style="position: absolute; width: 1008px; height: 582px; overflow: visible; transform: translate(0px, -27px); display: block;"><div style="position: absolute; width: 1008px; height: 582px; overflow: visible; transition: -webkit-transform 500ms ease 0s;"><img id="mapDiv_defaultBasemap_tile_5_0_0" alt="" class="layerTile" src="./Crowdsource Reporter_files/18" style="width: 256px; height: 256px; visibility: inherit; transform: translate(-254px, -99px);"><img id="mapDiv_defaultBasemap_tile_5_1_0" alt="" class="layerTile" src="./Crowdsource Reporter_files/18(1)" style="width: 256px; height: 256px; visibility: inherit; transform: translate(-254px, 157px);"><img id="mapDiv_defaultBasemap_tile_5_2_0" alt="" class="layerTile" src="./Crowdsource Reporter_files/18(2)" style="width: 256px; height: 256px; visibility: inherit; transform: translate(-254px, 413px);"><img id="mapDiv_defaultBasemap_tile_5_0_1" alt="" class="layerTile" src="./Crowdsource Reporter_files/19" style="width: 256px; height: 256px; visibility: inherit; transform: translate(2px, -99px);"><img id="mapDiv_defaultBasemap_tile_5_1_1" alt="" class="layerTile" src="./Crowdsource Reporter_files/19(1)" style="width: 256px; height: 256px; visibility: inherit; transform: translate(2px, 157px);"><img id="mapDiv_defaultBasemap_tile_5_2_1" alt="" class="layerTile" src="./Crowdsource Reporter_files/19(2)" style="width: 256px; height: 256px; visibility: inherit; transform: translate(2px, 413px);"><img id="mapDiv_defaultBasemap_tile_5_0_2" alt="" class="layerTile" src="./Crowdsource Reporter_files/20" style="width: 256px; height: 256px; visibility: inherit; transform: translate(258px, -99px);"><img id="mapDiv_defaultBasemap_tile_5_1_2" alt="" class="layerTile" src="./Crowdsource Reporter_files/20(1)" style="width: 256px; height: 256px; visibility: inherit; transform: translate(258px, 157px);"><img id="mapDiv_defaultBasemap_tile_5_2_2" alt="" class="layerTile" src="./Crowdsource Reporter_files/20(2)" style="width: 256px; height: 256px; visibility: inherit; transform: translate(258px, 413px);"><img id="mapDiv_defaultBasemap_tile_5_0_3" alt="" class="layerTile" src="./Crowdsource Reporter_files/21" style="width: 256px; height: 256px; visibility: inherit; transform: translate(514px, -99px);"><img id="mapDiv_defaultBasemap_tile_5_1_3" alt="" class="layerTile" src="./Crowdsource Reporter_files/21(1)" style="width: 256px; height: 256px; visibility: inherit; transform: translate(514px, 157px);"><img id="mapDiv_defaultBasemap_tile_5_2_3" alt="" class="layerTile" src="./Crowdsource Reporter_files/21(2)" style="width: 256px; height: 256px; visibility: inherit; transform: translate(514px, 413px);"><img id="mapDiv_defaultBasemap_tile_5_0_4" alt="" class="layerTile" src="./Crowdsource Reporter_files/22" style="width: 256px; height: 256px; visibility: inherit; transform: translate(770px, -99px);"><img id="mapDiv_defaultBasemap_tile_5_1_4" alt="" class="layerTile" src="./Crowdsource Reporter_files/22(1)" style="width: 256px; height: 256px; visibility: inherit; transform: translate(770px, 157px);"><img id="mapDiv_defaultBasemap_tile_5_2_4" alt="" class="layerTile" src="./Crowdsource Reporter_files/22(2)" style="width: 256px; height: 256px; visibility: inherit; transform: translate(770px, 413px);"></div></div><svg overflow="hidden" width="1008" height="582" id="mapDiv_gc" style="touch-action: none; will-change: transform; overflow: visible; position: absolute; transform: translate(0px, -28px);"><g id="BirdObservationTryItLive_2797_layer" data-geometry-type="point" data-suspended="" data-hidden="" style="display: none;"><g></g></g><g id="GraphicsBirdObservationTryItLive_2797_layer" style="display: block;"><g></g></g><g id="selectionGraphicsLayer_layer" style="display: block;"><g></g></g><g id="graphicsLayer6_layer" style="display: block;"><g></g></g><g id="featureLayerGraphics_layer" style="display: block;"><g></g></g><defs></defs><g id="mapDiv_graphics_layer" style="display: block;"><g></g></g></svg></div></div><div class="esriControlsBR"><span class="esriAttribution" tabindex="" role="button" aria-expanded="false" style="max-width: 453px; cursor: default;"><span class="esriAttributionList"><span class="esriAttributionLastItem" style="display: inline;">Esri, HERE, Garmin, FAO, NOAA, USGS<span class="esriAttributionDelim"> | </span></span></span></span><div tabindex="-1" title="Esri" class="logo-med" role="link"></div></div><div class="esriPopup esriPopupHidden light"><div class="esriPopupWrapper" style="position: absolute;"><div class="sizer"><div class="titlePane"><div class="spinner hidden" title="Searching..."></div><div class="title"></div><div class="titleButton prev hidden" title="Previous feature"></div><div class="titleButton next hidden" title="Next feature"></div><div class="titleButton maximize" title="Maximize"></div><div class="titleButton close" title="Close"></div></div></div><div class="sizer content"><div class="contentPane"></div></div><div class="sizer"><div class="actionsPane"><div class="actionList hidden"><a title="Zoom to" class="action zoomTo" href="javascript:void(0);"><span>Zoom to</span></a></div></div></div><div class="pointer hidden"></div></div><div class="outerPointer hidden"></div></div><div id="mapDiv_zoom_slider" class="esriSimpleSlider esriSimpleSliderVertical esriSimpleSliderTL" style="z-index: 30;"><div class="esriSimpleSliderIncrementButton esriCTIncrementButton esriCTPointerCursor" tabindex="0" role="button" title="Zoom in"></div><div class="esriCTMapHomeButtonContainer"><div class="HomeButton esriCTHomeButton" role="presentation" id="esri_dijit_HomeButton_4" widgetid="esri_dijit_HomeButton_4" style="display: block;">
+    <div class="homeContainer">
+            <div data-dojo-attach-point="_homeNode" title="Default extent" role="button" class="home" tabindex="0"><span>Home</span></div>
+    </div>
+</div></div><div class="esriSimpleSliderDecrementButton esriCTDecrementButton esriCTPointerCursor" tabindex="0" role="button" title="Zoom out"></div><div class="esriCTMapGeoLocationContainer" style="display: block;"><div class="LocateButton" role="presentation" id="esri_dijit_LocateButton_5" widgetid="esri_dijit_LocateButton_5" style="display: block;">
+    <div class="locateContainer">
+            <div data-dojo-attach-point="_locateNode" role="button" class="zoomLocateButton" tabindex="0" title="Find my location"><span>My Location</span></div>
+    </div>
+</div></div><div class="search" id="search"><div data-dojo-attach-point="divLocateContainer" class="esriCTLocateContainer esriCTMapSearchContainer" id="dijit__WidgetsInTemplateMixin_13" widgetid="dijit__WidgetsInTemplateMixin_13">
+    <div data-dojo-attach-point="location_tabs" class="tab-content">
+        <div data-dojo-attach-point="address">
+            <div class="form-group">
+                <div class="input-group">
+                    <input tabindex="0" data-dojo-attach-point="txtSearch" type="text" class="form-control form-control-lg esriCTTxtSearch esriCTTxtMapSearch" placeholder="Place or Address" aria-label="Place or Address" defaultaddress="" style="display: none; width: 0px; padding-left: 0px; padding-right: 0px; opacity: 0;">
+                    <div class="input-group-btn" data-dojo-attach-point="geocoder_buttons" style="right: -5px;">
+                        <div role="button" tabindex="0" class="esriCTSearchButton esriCTPointerCursor esriCTLocatorSearchButton" data-dojo-attach-point="searchSubmit" title="Search">
+                        </div>
+                    </div>
+                    <div class="esriCTSearchClose" data-dojo-attach-point="clearhide" style="display: none;">
+                        <span class="esriCTClearInput" data-dojo-attach-point="close" title="Clear search value"></span><span data-dojo-attach-point="imgSearchLoader" class="esriCTSearchLoader"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-dojo-attach-point="divResultContainer" class="esriCTResultContainer esriCTHidden"></div>
+</div></div></div></div></div>
+                </div>
+                <div id="webMapListMapDiv" dir="ltr" data-dojo-props="region:&#39;center&#39;" style="display: none"><div id="tesMap_1659735792648" class="map" data-zoom="10" data-scale="577790.554289" data-loaded=""></div><div id="tesMap_1659735792650" class="map" data-zoom="10" data-scale="577790.554289" data-loaded=""></div><div id="tesMap_1659735792651" class="map" data-zoom="10" data-scale="577790.554289" data-loaded=""></div><div id="tesMap_1659735792652" class="map" data-zoom="10" data-scale="577790.554289" data-loaded=""></div><div id="tesMap_1659735792652"></div><div id="tesMap_1659735792653" class="map" data-zoom="10" data-scale="577790.554289" data-loaded=""></div><div id="tesMap_1659735792654" class="map" data-zoom="10" data-scale="577790.554289" data-loaded=""></div></div>
+                <div role="button" tabindex="0" id="submitFromMap" class="esriCTReportButton esriCTPointerCursor esriCTHidden" style="background-color: rgb(53, 172, 70);">
+                    <div class="esriCTReportButtonContainer">
+                        <div class="esriCTReportButtonIcon"></div>
+                        <div id="submitFromMapText" class="esriCTReportButtonText">Submit a Report</div>
+                    </div>
+                </div>
+            </div>
+            <div id="geoformContainer" class="esriCTBorderLeft esriCTGeoFormParentContainer esriCTHeaderTextColorAsBorder esriCTHidden"><div class="esriCTGeoFormContainer esriCTBodyBackgroundColor" id="dijit__TemplatedMixin_3" widgetid="dijit__TemplatedMixin_3">
+    <div class="esriCTListHeader esriCTBGColor esriCTHeaderTextColorAsBackground esriCTHeaderBackgroundColorAsTextColor" data-dojo-attach-point="formHeader">
+        <div tabindex="0" role="button" data-dojo-attach-point="closeButton" title="Return to the list" aria-label="Return to the list">
+                <span aria-hidden="true" class="esriCTBackButton esriCTInvertFontIcons icon icon-left-arrow esriCTPointerCursor">
+                </span>
+                <span class="esriCTFallBackText" data-dojo-attach-point="fallBackTextNode" title="Return to the list"></span>
+            </div>
+        <div tabindex="-1" class="esriCTHeaderText esriCTGeoFormHeaderText esriCTEllipsis" data-dojo-attach-point="layerTitleDiv">Bird Observations</div>
+    </div>
+    <div class="esriCTGeoFormBody esriCTBodyTextColor" id="geoFormBody">
+        <div data-dojo-attach-point="headerMessageDiv" class="esriCTHeaderMessageDiv esriCTHidden">
+            <div data-dojo-attach-point="headerMessageType" class="esriCTSuccessMsg alert alert-success">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true" data-dojo-attach-point="headerMessageButton">×</span>
+                </button>
+                <span tabindex="-1" data-dojo-attach-point="headerMessageContent"></span>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-xs-12 col-sm-12 esriCTFullWidth" data-dojo-attach-point="componentSection"><div data-dojo-attach-point="detailSection">
+                        <div class="esriCTGeoFormTitles" data-dojo-attach-point="enter_Information" aria-label="Details">Details</div>
+                        <form role="form" data-dojo-attach-point="userForm">
+                        <div class="form-group geoFormQuestionare mandatory"><label for="OBSERVTYPE" class="control-label" id="OBSERVTYPE_label_0">Type of Observation<small class="esriCTRequireFieldStyle">(required)</small></label><select class="form-control selectDomain custom-select" id="OBSERVTYPE"><option value="">Select…</option><option value="American Bittern">American Bittern</option><option value="Barn Owl">Barn Owl</option><option value="Bewick&#39;s Wren">Bewick's Wren</option><option value="Black Rail">Black Rail</option><option value="Black Tern">Black Tern</option><option value="Black-crowned Night-Heron">Black-crowned Night-Heron</option><option value="Common Moorhen">Common Moorhen</option><option value="Common Tern">Common Tern</option><option value="Forster&#39;s Tern">Forster's Tern</option><option value="Greater Prairie-Chicken">Greater Prairie-Chicken</option><option value="King Rail">King Rail</option><option value="Least Tern">Least Tern</option><option value="Little Blue Heron">Little Blue Heron</option><option value="Loggerhead Shrike">Loggerhead Shrike</option><option value="Northern Harrier">Northern Harrier</option><option value="Osprey">Osprey</option><option value="Piping Plover">Piping Plover</option><option value="Short-eared Owl">Short-eared Owl</option><option value="Snowy Egret">Snowy Egret</option><option value="Swainson&#39;s Hawk">Swainson's Hawk</option><option value="Swainson&#39;s Warbler">Swainson's Warbler</option><option value="Upland Sandpiper">Upland Sandpiper</option><option value="Wilson&#39;s Phalarope">Wilson's Phalarope</option><option value="Yellow-crowned Night-Heron">Yellow-crowned Night-Heron</option><option value="Yellow-headed Blackbird">Yellow-headed Blackbird</option></select></div><div class="form-group geoFormQuestionare"><label for="DETAILS" class="control-label" id="DETAILS_label_1">Details</label><input type="text" class="form-control" data-input-type="String" maxlength="255" id="DETAILS"></div><div class="form-group geoFormQuestionare"><label for="NAME" class="control-label" id="NAME_label_2">Name</label><input type="text" class="form-control" data-input-type="String" maxlength="150" id="NAME"></div><div class="form-group geoFormQuestionare"><label for="PHONE" class="control-label" id="PHONE_label_3">Phone</label><input type="text" class="form-control" data-input-type="String" maxlength="12" id="PHONE"></div><div class="form-group geoFormQuestionare"><label for="EMAIL" class="control-label" id="EMAIL_label_4">Email</label><input type="text" class="form-control" data-input-type="String" maxlength="100" id="EMAIL"></div><div class="form-group geoFormQuestionare"><label for="SUBMITDT" class="control-label" id="SUBMITDT_label_5">Date Submitted</label><div class="input-group date"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span><input type="text" class="form-control hasDatetimepicker is-valid" data-input-type="Date" id="SUBMITDT"></div></div></form>
+                    </div><div data-dojo-attach-point="attachmentSection"><div class="form-group hasAttachment geoFormQuestionare esriCTGeoFormAttachmentLabel"><label aria-label="Attachments" id="geoFormAttachmentTitileLabel" class="esriCTGeoFormTitles">Attachments</label><br><div class="esriCTFileButtonContainer" title="Browse"><button type="button" tabindex="0" aria-label="Browse" class="fileInputButton btn  btn-default esriCTPointerCursor esriCTGeoFormButton esriCTApplicationColor esriCTButtonTextColor esriCTButtonBackgroundColor">Browse</button><form tabindex="-1" id="geoFormAttachment1" class="esriCTHideFileInputUI"><input type="file" accept="image/*, video/*" aria-label="Browse" name="attachment" tabindex="-1" class="esriCTPointerCursor" style="height: 35px; width: 77px;"></form></div><div id="attachmentSelectedCount" tabindex="0" class="esriCTHidden esriCTAttachmentSelectedCount"></div><div class="container esriCTAttachmentContainer"><div class="row esriCTFileAttachMentList"></div></div></div></div><div data-dojo-attach-point="locationSection">
+                        <div class="esriCTGeoFormTitles" data-dojo-attach-point="select_location" aria-label="Location">Location</div>
+                        <div class="esriGeoformCTLocationHint" data-dojo-attach-point="locationHintTextNode" aria-label="Click the map to draw the location.">Click the map to draw the location.</div>
+                        <div data-dojo-attach-point="location_panel_body">
+                            <div data-dojo-attach-point="geoformLocator" class="esriCTlocationPanel">
+                            <div data-dojo-attach-point="divLocateContainer" class="esriCTLocateContainer esriCTMapSearchContainer" id="dijit__WidgetsInTemplateMixin_15" widgetid="dijit__WidgetsInTemplateMixin_15">
+    <div data-dojo-attach-point="location_tabs" class="tab-content">
+        <div data-dojo-attach-point="address">
+            <div class="form-group">
+                <div class="input-group">
+                    <input tabindex="0" data-dojo-attach-point="txtSearch" type="text" class="form-control form-control-lg esriCTTxtSearch esriCTTxtMapSearch" placeholder="Place or Address" aria-label="Place or Address" defaultaddress="HSR Layout, Bengaluru, Karnataka">
+                    <div class="input-group-btn" data-dojo-attach-point="geocoder_buttons">
+                        <div role="button" tabindex="0" class="esriCTSearchButton esriCTPointerCursor esriCTLocatorSearchButton" data-dojo-attach-point="searchSubmit" title="Search">
+                        </div>
+                    </div>
+                    <div class="esriCTSearchClose" data-dojo-attach-point="clearhide">
+                        <span class="esriCTClearInput" data-dojo-attach-point="close" title="Clear search value" style="display: block;"></span><span data-dojo-attach-point="imgSearchLoader" class="esriCTSearchLoader" style="display: none;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-dojo-attach-point="divResultContainer" class="esriCTResultContainer esriCTHidden"></div>
+</div></div>
+                            <div data-dojo-attach-point="geoLocationButton" class="esriCTGeoFormGeoLocation esriCTPointerCursor" style="display: block;">
+                            <div class="LocateButton" role="presentation" id="esri_dijit_LocateButton_6" widgetid="esri_dijit_LocateButton_6" style="display: block;">
+    <div class="locateContainer">
+            <div data-dojo-attach-point="_locateNode" role="button" class="zoomLocateButton" tabindex="0" title="Find my location"><span>My Location</span></div>
+    </div>
+</div></div>
+                        </div>
+                        <div class="gf-map panel panel-default esriCTmapParentContainer" data-dojo-attach-point="map_container" style="display: none;">
+                            <!-- The ArcGIS API for JavaScript provides bidirectional support.  When viewing the application in an right to left (rtl) language like Hebrew and Arabic the map needs to remain in left-to-right (ltr) mode. Specify this by setting the dir attribute on the div to ltr. -->
+                            <div id="gf-mapDiv" dir="ltr" class="map-div esriCTGeoFormMapContainer map" data-zoom="12" data-scale="144447.638572" data-loaded="">
+                            <div id="gf-mapDiv_root" class="esriMapContainer" style="width: 400px; height: 400px; direction: ltr;"><div id="gf-mapDiv_container" class="esriMapContainer" style="position: absolute; cursor: default; touch-action: none; clip: auto;"><div id="gf-mapDiv_layers" class="esriMapLayers" style="left: 0px; top: 0px;"><div id="gf-mapDiv_defaultBasemap" style="position: absolute; width: 400px; height: 400px; overflow: visible; transform: translate(0px, 0px); display: block;"><div style="position: absolute; width: 400px; height: 400px; overflow: visible; transition: -webkit-transform 500ms ease 0s;"><img id="gf-mapDiv_defaultBasemap_tile_12_0_0" alt="" class="layerTile" src="./Crowdsource Reporter_files/2930" style="width: 256px; height: 256px; visibility: inherit; transform: translate(-164px, -11px);"><img id="gf-mapDiv_defaultBasemap_tile_12_1_0" alt="" class="layerTile" src="./Crowdsource Reporter_files/2930(1)" style="width: 256px; height: 256px; visibility: inherit; transform: translate(-164px, 245px);"><img id="gf-mapDiv_defaultBasemap_tile_12_0_1" alt="" class="layerTile" src="./Crowdsource Reporter_files/2931" style="width: 256px; height: 256px; visibility: inherit; transform: translate(92px, -11px);"><img id="gf-mapDiv_defaultBasemap_tile_12_1_1" alt="" class="layerTile" src="./Crowdsource Reporter_files/2931(1)" style="width: 256px; height: 256px; visibility: inherit; transform: translate(92px, 245px);"><img id="gf-mapDiv_defaultBasemap_tile_12_0_2" alt="" class="layerTile" src="./Crowdsource Reporter_files/2932" style="width: 256px; height: 256px; visibility: inherit; transform: translate(348px, -11px);"><img id="gf-mapDiv_defaultBasemap_tile_12_1_2" alt="" class="layerTile" src="./Crowdsource Reporter_files/2932(1)" style="width: 256px; height: 256px; visibility: inherit; transform: translate(348px, 245px);"></div></div><svg overflow="hidden" width="400" height="400" id="gf-mapDiv_gc" style="touch-action: none; will-change: transform; overflow: visible; position: absolute; transform: translate(0px, 0px);"><g id="BirdObservationTryItLive_2797_layer" data-geometry-type="point" style="display: block;"><g></g></g><g id="graphicsLayer7_layer" style="display: block;"><g></g><circle fill="rgb(255, 255, 255)" fill-opacity="0.25" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1.3333333333333333" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" cx="296" cy="275" r="8" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,0.00000000)" fill-rule="evenodd" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></circle></g><defs></defs><g id="gf-mapDiv_graphics_layer" style="display: block;"><g></g></g></svg></div></div><div class="esriControlsBR"><span class="esriAttribution" tabindex="" style="max-width: 180px; cursor: default;"><span class="esriAttributionList"><span class="esriAttributionLastItem" style="display: inline;">Esri, HERE, Garmin, USGS, NGA<span class="esriAttributionDelim"> | </span></span></span></span><div tabindex="0" title="Esri" class="logo-sm"></div></div><div class="esriPopup esriPopupHidden light"><div class="esriPopupWrapper" style="position: absolute;"><div class="sizer"><div class="titlePane"><div class="spinner hidden" title="Searching..."></div><div class="title"></div><div class="titleButton prev hidden" title="Previous feature"></div><div class="titleButton next hidden" title="Next feature"></div><div class="titleButton maximize" title="Maximize"></div><div class="titleButton close" title="Close"></div></div></div><div class="sizer content"><div class="contentPane"></div></div><div class="sizer"><div class="actionsPane"><div class="actionList hidden"><a title="Zoom to" class="action zoomTo" href="javascript:void(0);"><span>Zoom to</span></a></div></div></div><div class="pointer hidden"></div></div><div class="outerPointer hidden"></div></div><div id="gf-mapDiv_zoom_slider" class="esriSimpleSlider esriSimpleSliderVertical esriSimpleSliderTL" style="z-index: 30;"><div class="esriSimpleSliderIncrementButton" tabindex="0" role="button" title="Zoom in"><span aria-hidden="true" role="presentation">+</span><span class="esriIconFallbackText">Zoom In</span></div><div class="esriSimpleSliderDecrementButton" tabindex="0" role="button" title="Zoom out"><span aria-hidden="true" role="presentation">−</span><span class="esriIconFallbackText">Zoom Out</span></div></div></div></div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="clearfix">
+                    </div>
+                    <div class="form-group">
+                        <div class="submit-area">
+                            <div tabindex="0" role="button" data-dojo-attach-point="submitButton" class="esriCTGeoFormButton esriCTGeoFormSubmitButton esriCTEllipsis esriCTBGColor btn btn-default esriCTSubmitButton esriCTButtonTextColor esriCTButtonBackgroundColor" title="Submit" aria-label="Submit">Report It</div>
+                            <div tabindex="0" role="button" data-dojo-attach-point="cancelButton" class="esriCTGeoFormButton esriCTGeoFormCancelButton esriCTEllipsis esriCTApplicationColor btn btn-default esriCTButtonTextColor esriCTButtonBackgroundColor" title="Cancel" aria-label="Cancel">Cancel</div>
+                        </div>
+                    </div>
+                </div>
+            <div class="clearfix">
+            </div>
+        </div>
+    </div>
+    <div data-dojo-attach-point="geoFormLoader" class="esriCTGeoFormLoader esriCTHidden">
+    </div>
+</div></div>
+            <div id="detailsPanelContainer" class="esriCTHidden esriCTBorderLeft esriCTGeoFormParentContainer esriCTHeaderTextColorAsBorder"></div>
+            <div id="sideContainer" class="esriCTBorderLeft esriCTHeaderTextColorAsBorder">
+                <div id="sidebarContent" class="dijitContentPane esriCTFullHeightWidth esriCTBodyBackgroundColor" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:&#39;center&#39;" widgetid="sidebarContent">
+                <div id="dijit__TemplatedMixin_0" widgetid="dijit__TemplatedMixin_0">
+    <div class="esriCTInfoLoader esriCTLoaderPosition esriCTDetailLoadingIndicator esriCTHidden" data-dojo-attach-point="detailLoadingIndicator">
+    </div>
+</div><div class="esriCTItemDetail" id="itemDetail" widgetid="itemDetail" style="display: none;">
+    <div class="esriCTListHeader esriCTBGColor esriCTHeaderBackgroundColorAsTextColor">
+        <div tabindex="0" role="button" data-dojo-attach-point="backIcon" title="View the list of submissions" aria-label="View the list of submissions">
+            <span aria-hidden="true" class="esriCTBackButton esriCTInvertFontIcons icon icon-left-arrow esriCTPointerCursor">
+            </span>
+            <span class="esriCTFallBackText">View the list of submissions</span>
+        </div>
+        <div tabindex="-1" data-dojo-attach-point="itemTitleDiv" class="esriCTHeaderText esriCTListHeaderText esriCTEllipsis esriCTDetailsHeader" data-toggle="tooltip" trigger="manual" data-placement="bottom" title="Bird Observations">Bird Observations</div>
+        <div class="esriCTVotesDetails" data-dojo-attach-point="votesDetailContainer" title="0 I agree" aria-label="0 I agree">
+            <div class="esriCTItemVotes esriCTEllipsis" data-dojo-attach-point="itemVotesDiv">0</div>
+            <div class="esriCTIcon fas fa-heart esriCTDetailsFavDiv"></div>
+        </div>
+    </div>
+    <div class="esriCTItemDetailsContainer esriCTCalculatedBodyBackgroundColor" data-dojo-attach-point="itemDetailsContainer">
+        <div class="esriCTTtemDescription esriCTBodyBackgroundColor">
+            <div class="esriCTDetailDescription esriCTSpaceBelow esriCTSmallText esriCTBodyBackgroundColor dijitContentPane" data-dojo-attach-point="descriptionDiv" id="itemCP" widgetid="itemCP"><div class="esriViewPopup" id="esri_dijit__PopupRenderer_0" widgetid="esri_dijit__PopupRenderer_0"><div class="statusSection hidden" dojoattachpoint="_status"></div><div class="mainSection"><div class="header" dojoattachpoint="_title">Submitted: Barn Owl</div><div class="hzLine"></div><div dojoattachpoint="_description"><table class="attrTable" cellpadding="0px" cellspacing="0px"><tr valign="top"><td class="attrName">Observation Number</td><td class="attrValue"></td></tr><tr valign="top"><td class="attrName">Details</td><td class="attrValue">hng</td></tr><tr valign="top"><td class="attrName">Name</td><td class="attrValue">hghg</td></tr><tr valign="top"><td class="attrName">Date Submitted</td><td class="attrValue"><span class="esriDateValue">August 4, 2022</span></td></tr><tr valign="top"><td class="attrName">Status</td><td class="attrValue">Submitted</td></tr></table></div><div class="break"></div></div><div class="attachmentsSection"><div>Attachments:</div><ul dojoattachpoint="_attachmentsList"><li>No attachments found</li></ul><div class="break"></div></div><div class="mediaSection hidden"><div class="header" dojoattachpoint="_mediaTitle"></div><div class="hzLine"></div><div class="caption" dojoattachpoint="_mediaCaption"></div><div class="gallery" dojoattachpoint="_gallery"><div class="mediaHandle prev" dojoattachpoint="_prevMedia" dojoattachevent="onclick: _goToPrevMedia" title="Previous media"></div><div class="mediaHandle next" dojoattachpoint="_nextMedia" dojoattachevent="onclick: _goToNextMedia" title="Next media"></div><ul class="summary"><li class="image mediaCount hidden" dojoattachpoint="_imageCount">0</li><li class="image mediaIcon hidden"></li><li class="chart mediaCount hidden" dojoattachpoint="_chartCount">0</li><li class="chart mediaIcon hidden"></li></ul><div class="frame" dojoattachpoint="_mediaFrame"></div></div></div><div class="editSummarySection hidden" dojoattachpoint="_editSummarySection"><div class="break"></div><div class="break hidden" dojoattachpoint="_mediaBreak"></div><div class="editSummary" dojoattachpoint="_editSummary"></div></div></div></div>
+            <div tabindex="0" class="esriCTEditModePopupContainer esriCTBodyBackgroundColor esriCTHidden" data-dojo-attach-point="popupDetailsDiv"></div>
+            <div class="esriCTItemDescFooter esriCTSmallText esriCTBodyBackgroundColor" data-dojo-attach-point="actionButtonsContainer">
+                <div class="esriCTDetailButtonContainer">
+                    <button tabindex="0" type="button" class="btn btn-default esriCTDetailsPanelButton esriCTEllipsis esriCTSmallText esriCTApplicationColor esriCTButtonTextColor esriCTButtonBackgroundColor" data-dojo-attach-point="likeButton" aria-label="I agree" title="I agree" style="display: inline-block;">
+                        <span class="fas fa-heart esriCTMargin" aria-hidden="true"></span>
+                        <span class="esriCTButtonLabel" data-dojo-attach-point="likeLabel"></span>
+                    </button>
+                </div>
+                <div class="esriCTDetailButtonContainer">
+                    <button tabindex="0" type="button" class="btn btn-default  esriCTDetailsPanelButton esriCTEllipsis esriCTSmallText esriCTApplicationColor esriCTButtonTextColor esriCTButtonBackgroundColor" data-dojo-attach-point="commentButton" aria-label="Leave a reply" title="Leave a reply" style="display: none;">
+                        <span class="fas fa-comment-alt" aria-hidden="true"></span>
+                        <span class="esriCTButtonLabel" data-dojo-attach-point="commentLabel"></span>
+                    </button>
+                </div>
+                <div class="esriCTDetailButtonContainer esriCTMapItButtonVisibility">
+                    <button tabindex="0" type="button" class="btn btn-default esriCTDetailsPanelButton esriCTEllipsis esriCTSmallText esriCTApplicationColor esriCTButtonTextColor esriCTButtonBackgroundColor" data-dojo-attach-point="mapItButton" aria-label="View the location of this submission" title="View the location of this submission">
+                        <span class="fas fa-map-marker-alt" aria-hidden="true"></span>
+                        <span class="esriCTButtonLabel" data-dojo-attach-point="mapLabel">View on Map</span>
+                    </button>
+                </div>
+                <div class="esriCTDetailButtonContainer">
+                    <button tabindex="0" type="button" class="btn btn-default esriCTDetailsPanelButton esriCTEllipsis esriCTSmallText esriCTApplicationColor esriCTFloatRight esriCTGalleryButton esriCTButtonTextColor esriCTButtonBackgroundColor" data-dojo-attach-point="galleryButton" aria-label="See attached documents" title="See attached documents" style="display: none;">
+                        <span class="fas fa-image esriCTMargin" aria-hidden="true"></span>
+                        <span class="esriCTButtonLabel" data-dojo-attach-point="gallerylabel"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="esriCTFloatLeft esriCTFullWidth esriCTDetailsPanel">
+            <div class="esriCTAttachmentsSection esriCTDetailsData esriCTHidden esriCTFullWidth esriCTBodyTextColor esriCTBodyBackgroundColor esriCTFloatLeft" data-dojo-attach-point="gallery">
+            </div>
+            <div class="esriCTItemComments esriCTCalculatedBodyBackgroundColor">
+                <div data-dojo-attach-point="headerMessageType" aria-label="Thank you for your feedback." class="esriCTHidden esriCTSuccessMsg alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true" data-dojo-attach-point="headerMessageButton">×</span>
+                    </button>
+                    <span tabindex="-1" data-dojo-attach-point="headerMessageContent">Comments Submitted Successfully.</span>
+                </div>
+                <div tabindex="-1" class="esriCTItemComments esriCTHidden" data-dojo-attach-point="commentDetails"></div>
+                <div class="esriCTHidden esriCTItemDetailHeader esriCTLargeText esriCTEllipsis esriCTCalculatedBodyTextColorAsBorder esriCTBodyTextColor" data-dojo-attach-point="commentsHeading"></div>
+                <div class="esriCTSmallText esriCTDetailsNoResult esriCTHidden esriCTBodyTextColor" data-dojo-attach-point="noCommentsDiv"></div>
+                <div class="esriCTSmallText esriCTCommentsList esriCTHidden" data-dojo-attach-point="commentsList"></div>
+            </div>
+        </div>
+    </div>
+</div><div class="esriCTFullHeight" id="dijit__WidgetsInTemplateMixin_5" widgetid="dijit__WidgetsInTemplateMixin_5" style="">
+    <div data-dojo-attach-point="esriCTWebMapListParentDiv" class="esriCTWebMapListParentDiv esriCTBodyBackgroundColor">
+    <div class="esriCTPointerCursor esriCTDisplayWebMapTemplate esriCTHeaderTextColorAsBorder esriCTBorder" webmapid="7377412d3bd7400cbd5b355404285682" operationallayerid="BirdObservationTryItLive_2797">
+    <a tabindex="-1" aria-label="Bird Observations" class="esriCTWebMapbgColor media-left" href="https://www.arcgis.com/apps/CrowdsourceReporter/index.html#">
+        <img class="esriCTWebMapImg" alt="" src="./Crowdsource Reporter_files/bird_cyan.png">
+    </a>
+    <div class="esriCTMediaBody esriCTSelectedItem">
+        <div role="button" tabindex="0" class="esriCTMultiLineEllipsisdiv" aria-label="Bird Observations">
+            <span class="media-heading esriCTHeaderFont">Bird Observations
+                <span class="esriCTMultiLineFill"></span>
+            </span>
+        </div>
+        <div tabindex="0" role="button" aria-expanded="false" class="esriCTMapInfoContainer" title="Map information" aria-label="Map information">
+            <span aria-hidden="true" class="esriCTInfoImg esriCTApplicationColor esriCTInfoImgRight icon icon-info esriCTBodyTextColor">
+            </span>
+            <span class="esriCTInfoImgFallBack esriCTFallBackText">Map information</span>
+        </div>
+    </div>
+    <div class="esriCTDefaultCursor esriCTDescription esriCTHidden esriCTMediaBorder">
+        <div class="esriCTDetailsContainerParent"><div class="esriCTDetailsContainerRow"><div class="esriCTDetailsContainerCell"><div class="esriCTInfoHeader">Description</div><div class="esriCTInfoDetails esriCTCalculatedBodyTextColorAsBorder">Submit bird observation reports, review reports submitted by others, and provide your own feedback as votes and comments. Reports submitted through this application can be reviewed, assessed, and updated by a data manager using <a href="http://www.arcgis.com/apps/CrowdsourceManager/index.html" target="_blank">a configuration of Crowdsource Manager</a>.<br><br>For more information on Crowdsource Reporter, <a href="http://links.esri.com/localgovernment/help/crowdsource-reporter/" target="_blank">check out the documentation</a>.</div></div></div><div class="esriCTDetailsContainerRow"><div class="esriCTDetailsContainerCell"><div class="esriCTInfoHeader">Owner</div><div class="esriCTInfoDetails esriCTCalculatedBodyTextColorAsBorder">LocalGovTryItLive</div></div></div></div>
+    </div>
+    <div class="esriCTLayerList">
+    </div>
+</div><div class="esriCTPointerCursor esriCTDisplayWebMapTemplate esriCTWebMapBorder esriCTHeaderTextColorAsBorder" webmapid="c5bcc893516e4c549eb2a3de512fa470" operationallayerid="BlightProblemTryItLive_6912">
+    <a tabindex="-1" aria-label="Blight Problems" class="esriCTWebMapbgColor media-left" href="https://www.arcgis.com/apps/CrowdsourceReporter/index.html#">
+        <img class="esriCTWebMapImg" alt="" src="./Crowdsource Reporter_files/mess_purple.png">
+    </a>
+    <div class="esriCTMediaBody">
+        <div role="button" tabindex="0" class="esriCTMultiLineEllipsisdiv" aria-label="Blight Problems">
+            <span class="media-heading esriCTHeaderFont">Blight Problems
+                <span class="esriCTMultiLineFill"></span>
+            </span>
+        </div>
+        <div tabindex="0" role="button" aria-expanded="false" class="esriCTMapInfoContainer" title="Map information" aria-label="Map information">
+            <span aria-hidden="true" class="esriCTInfoImg esriCTApplicationColor esriCTInfoImgRight icon icon-info esriCTBodyTextColor">
+            </span>
+            <span class="esriCTInfoImgFallBack esriCTFallBackText">Map information</span>
+        </div>
+    </div>
+    <div class="esriCTDefaultCursor esriCTDescription esriCTHidden esriCTMediaBorder">
+        <div class="esriCTDetailsContainerParent"><div class="esriCTDetailsContainerRow"><div class="esriCTDetailsContainerCell"><div class="esriCTInfoHeader">Description</div><div class="esriCTInfoDetails esriCTCalculatedBodyTextColorAsBorder">Report blight, review reports submitted by others, and
+ provide your own feedback as votes and comments. Reports submitted 
+through this application can be reviewed, assessed, and updated by a data manager using <a href="http://www.arcgis.com/apps/CrowdsourceManager/index.html" target="_blank">a configuration of Crowdsource Manager</a>.<br><br>For more information on Crowdsource Reporter, <a href="http://links.esri.com/localgovernment/help/crowdsource-reporter/" target="_blank">check out the documentation</a>.</div></div></div><div class="esriCTDetailsContainerRow"><div class="esriCTDetailsContainerCell"><div class="esriCTInfoHeader">Owner</div><div class="esriCTInfoDetails esriCTCalculatedBodyTextColorAsBorder">LocalGovTryItLive</div></div></div></div>
+    </div>
+    <div class="esriCTLayerList">
+    </div>
+</div><div class="esriCTPointerCursor esriCTDisplayWebMapTemplate esriCTWebMapBorder esriCTHeaderTextColorAsBorder" webmapid="98ad6423f5e046868e577ee0fa35b215" operationallayerid="HealthProblemTryItLive_2322">
+    <a tabindex="-1" aria-label="Health Problems" class="esriCTWebMapbgColor media-left" href="https://www.arcgis.com/apps/CrowdsourceReporter/index.html#">
+        <img class="esriCTWebMapImg" alt="" src="./Crowdsource Reporter_files/mosquito_brown.png">
+    </a>
+    <div class="esriCTMediaBody">
+        <div role="button" tabindex="0" class="esriCTMultiLineEllipsisdiv" aria-label="Health Problems">
+            <span class="media-heading esriCTHeaderFont">Health Problems
+                <span class="esriCTMultiLineFill"></span>
+            </span>
+        </div>
+        <div tabindex="0" role="button" aria-expanded="false" class="esriCTMapInfoContainer" title="Map information" aria-label="Map information">
+            <span aria-hidden="true" class="esriCTInfoImg esriCTApplicationColor esriCTInfoImgRight icon icon-info esriCTBodyTextColor">
+            </span>
+            <span class="esriCTInfoImgFallBack esriCTFallBackText">Map information</span>
+        </div>
+    </div>
+    <div class="esriCTDefaultCursor esriCTDescription esriCTHidden esriCTMediaBorder">
+        <div class="esriCTDetailsContainerParent"><div class="esriCTDetailsContainerRow"><div class="esriCTDetailsContainerCell"><div class="esriCTInfoHeader">Description</div><div class="esriCTInfoDetails esriCTCalculatedBodyTextColorAsBorder">Report a non-emergency health risk, review reports submitted by others, and
+ provide your own feedback as votes and comments. Reports submitted 
+through this application can be reviewed, assessed, and updated by a data manager using <a href="http://www.arcgis.com/apps/CrowdsourceManager/index.html" target="_blank">a configuration of Crowdsource Manager</a>.<br><br>For more information on Crowdsource Reporter, <a href="http://links.esri.com/localgovernment/help/crowdsource-reporter/" target="_blank">check out the documentation</a>.</div></div></div><div class="esriCTDetailsContainerRow"><div class="esriCTDetailsContainerCell"><div class="esriCTInfoHeader">Owner</div><div class="esriCTInfoDetails esriCTCalculatedBodyTextColorAsBorder">LocalGovTryItLive</div></div></div></div>
+    </div>
+    <div class="esriCTLayerList">
+    </div>
+</div><div class="esriCTPointerCursor esriCTDisplayWebMapTemplate esriCTHeaderTextColorAsBorder esriCTWebMapBorder" webmapid="604a5857402942fa92a49a73fb48e0a9" operationallayerid="RoadProblemTryItLive_9072">
+    <a tabindex="-1" aria-label="Road Problems" class="esriCTWebMapbgColor media-left" href="https://www.arcgis.com/apps/CrowdsourceReporter/index.html#">
+        <img class="esriCTWebMapImg" alt="" src="./Crowdsource Reporter_files/car_green.png">
+    </a>
+    <div class="esriCTMediaBody">
+        <div role="button" tabindex="0" class="esriCTMultiLineEllipsisdiv" aria-label="Road Problems">
+            <span class="media-heading esriCTHeaderFont">Road Problems
+                <span class="esriCTMultiLineFill"></span>
+            </span>
+        </div>
+        <div tabindex="0" role="button" aria-expanded="false" class="esriCTMapInfoContainer" title="Map information" aria-label="Map information">
+            <span aria-hidden="true" class="esriCTInfoImg esriCTApplicationColor esriCTInfoImgRight icon icon-info esriCTBodyTextColor">
+            </span>
+            <span class="esriCTInfoImgFallBack esriCTFallBackText">Map information</span>
+        </div>
+    </div>
+    <div class="esriCTDefaultCursor esriCTDescription esriCTHidden esriCTMediaBorder">
+        <div class="esriCTDetailsContainerParent"><div class="esriCTDetailsContainerRow"><div class="esriCTDetailsContainerCell"><div class="esriCTInfoHeader">Description</div><div class="esriCTInfoDetails esriCTCalculatedBodyTextColorAsBorder">Report an issue with a road or path, review reports submitted by others, and
+ provide your own feedback as votes and comments. Reports submitted 
+through this application can be reviewed, assessed, and updated by a data manager using <a href="http://www.arcgis.com/apps/CrowdsourceManager/index.html" target="_blank">a configuration of Crowdsource Manager</a>.<br><br>For more information on Crowdsource Reporter, <a href="http://links.esri.com/localgovernment/help/crowdsource-reporter/" target="_blank">check out the documentation</a>.</div></div></div><div class="esriCTDetailsContainerRow"><div class="esriCTDetailsContainerCell"><div class="esriCTInfoHeader">Owner</div><div class="esriCTInfoDetails esriCTCalculatedBodyTextColorAsBorder">LocalGovTryItLive</div></div></div></div>
+    </div>
+    <div class="esriCTLayerList">
+    </div>
+</div><div class="esriCTPointerCursor esriCTDisplayWebMapTemplate esriCTWebMapBorder esriCTHeaderTextColorAsBorder" webmapid="c7ea5d9497154d448227984d880bb4b8" operationallayerid="SafetyProblemTryItLive_3912">
+    <a tabindex="-1" aria-label="Safety Problems" class="esriCTWebMapbgColor media-left" href="https://www.arcgis.com/apps/CrowdsourceReporter/index.html#">
+        <img class="esriCTWebMapImg" alt="" src="./Crowdsource Reporter_files/warning_red.png">
+    </a>
+    <div class="esriCTMediaBody">
+        <div role="button" tabindex="0" class="esriCTMultiLineEllipsisdiv" aria-label="Safety Problems">
+            <span class="media-heading esriCTHeaderFont">Safety Problems
+                <span class="esriCTMultiLineFill"></span>
+            </span>
+        </div>
+        <div tabindex="0" role="button" aria-expanded="false" class="esriCTMapInfoContainer" title="Map information" aria-label="Map information">
+            <span aria-hidden="true" class="esriCTInfoImg esriCTApplicationColor esriCTInfoImgRight icon icon-info esriCTBodyTextColor">
+            </span>
+            <span class="esriCTInfoImgFallBack esriCTFallBackText">Map information</span>
+        </div>
+    </div>
+    <div class="esriCTDefaultCursor esriCTDescription esriCTHidden esriCTMediaBorder">
+        <div class="esriCTDetailsContainerParent"><div class="esriCTDetailsContainerRow"><div class="esriCTDetailsContainerCell"><div class="esriCTInfoHeader">Description</div><div class="esriCTInfoDetails esriCTCalculatedBodyTextColorAsBorder">Report a non-emergency public safety risk, review reports submitted by others, and
+ provide your own feedback as votes and comments. Reports submitted 
+through this application can be reviewed, assessed, and updated by a data manager using <a href="http://www.arcgis.com/apps/CrowdsourceManager/index.html" target="_blank">a configuration of Crowdsource Manager</a>.<br><br>For more information on Crowdsource Reporter, <a href="http://links.esri.com/localgovernment/help/crowdsource-reporter/" target="_blank">check out the documentation</a>.</div></div></div><div class="esriCTDetailsContainerRow"><div class="esriCTDetailsContainerCell"><div class="esriCTInfoHeader">Owner</div><div class="esriCTInfoDetails esriCTCalculatedBodyTextColorAsBorder">LocalGovTryItLive</div></div></div></div>
+    </div>
+    <div class="esriCTLayerList">
+    </div>
+</div><div class="esriCTPointerCursor esriCTDisplayWebMapTemplate esriCTWebMapBorder esriCTHeaderTextColorAsBorder" webmapid="0e82246a24824821b2022af80a4ffac0" operationallayerid="SnowIceProblemTryItLive_5229">
+    <a tabindex="-1" aria-label="Snow &amp; Ice Problems" class="esriCTWebMapbgColor media-left" href="https://www.arcgis.com/apps/CrowdsourceReporter/index.html#">
+        <img class="esriCTWebMapImg" alt="" src="./Crowdsource Reporter_files/snowflake_blue.png">
+    </a>
+    <div class="esriCTMediaBody">
+        <div role="button" tabindex="0" class="esriCTMultiLineEllipsisdiv" aria-label="Snow &amp; Ice Problems">
+            <span class="media-heading esriCTHeaderFont">Snow &amp; Ice Problems
+                <span class="esriCTMultiLineFill"></span>
+            </span>
+        </div>
+        <div tabindex="0" role="button" aria-expanded="false" class="esriCTMapInfoContainer" title="Map information" aria-label="Map information">
+            <span aria-hidden="true" class="esriCTInfoImg esriCTApplicationColor esriCTInfoImgRight icon icon-info esriCTBodyTextColor">
+            </span>
+            <span class="esriCTInfoImgFallBack esriCTFallBackText">Map information</span>
+        </div>
+    </div>
+    <div class="esriCTDefaultCursor esriCTDescription esriCTHidden esriCTMediaBorder">
+        <div class="esriCTDetailsContainerParent"><div class="esriCTDetailsContainerRow"><div class="esriCTDetailsContainerCell"><div class="esriCTInfoHeader">Description</div><div class="esriCTInfoDetails esriCTCalculatedBodyTextColorAsBorder">Request help with snow or ice, review reports submitted by others, and
+ provide your own feedback as votes and comments. Reports submitted 
+through this application can be reviewed, assessed, and updated by a data manager using <a href="http://www.arcgis.com/apps/CrowdsourceManager/index.html" target="_blank">a configuration of Crowdsource Manager</a>.<br><br>For more information on Crowdsource Reporter, <a href="http://links.esri.com/localgovernment/help/crowdsource-reporter/" target="_blank">check out the documentation</a>.</div></div></div><div class="esriCTDetailsContainerRow"><div class="esriCTDetailsContainerCell"><div class="esriCTInfoHeader">Owner</div><div class="esriCTInfoDetails esriCTCalculatedBodyTextColorAsBorder">LocalGovTryItLive</div></div></div></div>
+    </div>
+    <div class="esriCTLayerList">
+    </div>
+</div><div class="esriCTPointerCursor esriCTDisplayWebMapTemplate esriCTHeaderTextColorAsBorder esriCTWebMapBorder" webmapid="a34cdef0f5dd423eb343257ffc1baa30" operationallayerid="TrashProblemTryItLive_9383">
+    <a tabindex="-1" aria-label="Trash Problems" class="esriCTWebMapbgColor media-left" href="https://www.arcgis.com/apps/CrowdsourceReporter/index.html#">
+        <img class="esriCTWebMapImg" alt="" src="./Crowdsource Reporter_files/garbage_black.png">
+    </a>
+    <div class="esriCTMediaBody">
+        <div role="button" tabindex="0" class="esriCTMultiLineEllipsisdiv" aria-label="Trash Problems">
+            <span class="media-heading esriCTHeaderFont">Trash Problems
+                <span class="esriCTMultiLineFill"></span>
+            </span>
+        </div>
+        <div tabindex="0" role="button" aria-expanded="false" class="esriCTMapInfoContainer" title="Map information" aria-label="Map information">
+            <span aria-hidden="true" class="esriCTInfoImg esriCTApplicationColor esriCTInfoImgRight icon icon-info esriCTBodyTextColor">
+            </span>
+            <span class="esriCTInfoImgFallBack esriCTFallBackText">Map information</span>
+        </div>
+    </div>
+    <div class="esriCTDefaultCursor esriCTDescription esriCTHidden esriCTMediaBorder">
+        <div class="esriCTDetailsContainerParent"><div class="esriCTDetailsContainerRow"><div class="esriCTDetailsContainerCell"><div class="esriCTInfoHeader">Description</div><div class="esriCTInfoDetails esriCTCalculatedBodyTextColorAsBorder">Report a trash issue, review reports submitted by others, and
+ provide your own feedback as votes and comments. Reports submitted 
+through this application can be reviewed, assessed, and updated by a data manager using <a href="http://www.arcgis.com/apps/CrowdsourceManager/index.html" target="_blank">a configuration of Crowdsource Manager</a>.<br><br>For more information on Crowdsource Reporter, <a href="http://links.esri.com/localgovernment/help/crowdsource-reporter/" target="_blank">check out the documentation</a>.</div></div></div><div class="esriCTDetailsContainerRow"><div class="esriCTDetailsContainerCell"><div class="esriCTInfoHeader">Owner</div><div class="esriCTInfoDetails esriCTCalculatedBodyTextColorAsBorder">LocalGovTryItLive</div></div></div></div>
+    </div>
+    <div class="esriCTLayerList">
+    </div>
+</div></div>
+</div><div class="esriCTFullHeight" id="dijit__WidgetsInTemplateMixin_7" widgetid="dijit__WidgetsInTemplateMixin_7" style="display: none;">
+    <div class="esriCTListHeader esriCTBGColor esriCTHeaderTextColorAsBackground esriCTHeaderBackgroundColorAsTextColor">
+        <div tabindex="0" role="button" data-dojo-attach-point="listBackButton" title="Go to main list" aria-label="Go to main list">
+            <span aria-hidden="true" class="esriCTBackButton esriCTInvertFontIcons icon icon-left-arrow esriCTPointerCursor">
+            </span>
+            <span class="esriCTFallBackText" data-dojo-attach-point="fallBackTextNode">Go to main list</span>
+        </div>
+        <div tabindex="-1" data-dojo-attach-point="listContainerTitle" class="esriCTHeaderText esriCTListHeaderText esriCTEllipsis" data-toggle="tooltip" trigger="manual" data-placement="bottom" title="Bird Observations">Bird Observations</div>
+        <div class="esriCTListButtonContainer">
+            <div tabindex="0" role="button" class="esriCTIssueWallMapItButton" data-dojo-attach-point="listMapItButton" title="Map view" aria-label="Map view">
+                <span aria-hidden="true" class="esriCTMapItButton esriCTPointerCursor icon icon-map">
+                </span>
+                <span class="esriCTFallBackText" data-dojo-attach-point="fallBackMapBtnTextNode" title="Map view"></span>
+            </div>
+            <div class="esriCTInfoLoader esriCTBGColor esriCTLoaderPosition esriCTHidden" data-dojo-attach-point="listLoadingIndicator">
+                <div class="esriCTHeaderLoadingIndicator">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-dojo-attach-point="listContainer" class="esriCTIssueListContainer">
+        <div data-dojo-attach-point="noIssuesMessage" class="esriCTNoIssueDiv esriCTBodyTextColor esriCTCalculatedBodyTextColorAsBorder esriCTHidden" aria-label="No features found">No features found</div>
+    <div id="dijit__TemplatedMixin_1" widgetid="dijit__TemplatedMixin_1" style="">
+    <div class="esriCTItemList esriCTBodyBackgroundColor esriCTBodyTextColor" data-dojo-attach-point="list"><div class="esriCTtemSummaryParent 3675_7377412d3bd7400cbd5b355404285682_BirdObservationTryItLive_2797 esriCTItemSummaryParentSelected" aria-label="Submitted: Barn Owl" tabindex="0" role="button"><div class="esriCTItemSummaryHighlighter esriCTItemSummarySelected"></div><div class="esriCTItemSummary esriCTCalculatedBodyTextColorAsBorder"><div class="esriCTItemTitle">Submitted: Barn Owl</div><div class="esriCTItemFav esriCTCalculatedBodyTextColor" title="0 Number of votes"><div class="esriCTItemVotes esriCTCalculatedBodyTextColor esriCTEllipsis">0</div><div class="fas fa-heart esriCTFavDiv esriCTCalculatedBodyTextColor"></div></div></div></div></div>
+</div></div>
+    <div tabindex="0" role="button" class="esriCTReportButton esriCTPointerCursor" data-dojo-attach-point="submitReport" aria-label="Submit a Report" style="background-color: rgb(53, 172, 70);">
+        <div class="esriCTReportButtonContainer">
+            <div class="esriCTReportButtonIcon"></div>
+            <div data-dojo-attach-point="submitReportButton" class="esriCTReportButtonText">Submit a Report</div>
+        </div>
+    </div>
+</div></div>
+            </div>
+        </div>
+        <div id="mobileMenuContainer" class="esriCTMobileMenuContainer esriCTHideMobileMenu">
+        <div data-dojo-attach-point="mobileMenuMainContainer" class="esriCTMobilemenu esriCTBodyBackgroundColor" id="dijit__WidgetsInTemplateMixin_4" widgetid="dijit__WidgetsInTemplateMixin_4">
+    <div data-dojo-attach-point="mobileMenuHeader" class="esriCTMobileMenuHeader esriCTBorderBottom esriCTHidden esriCTHeaderTextColor esriCTHeaderBackgroundColor esriCTHeaderTextColorAsBorder">
+        <div class="esriCTUserImg esriCTBGColor icon icon-user esriCTHeaderBackgroundColor"></div>
+        <div class="esriCTLoggedinUserName esriCTEllipsis esriCTApplicationColor esriCTHeaderTextColor" data-dojo-attach-point="loggedinUserNameDiv"></div>
+    </div>
+    <div class="esriCTBurgermenu esriCTBodyBackgroundColor esriCTBodyTextColor" data-dojo-attach-point="mainMenuContainer" style="height: 506px;">
+        <div role="menuitem" tabindex="0" data-dojo-attach-point="myReport" class="esriCTHidden esriCTBurgermenuStyle esriCTCalculatedBodyTextColorAsBorder esriCTPointerCursor" aria-label="View my submissions" title="View my submissions">
+            My Submissions</div>
+        <div role="menuitem" tabindex="0" data-dojo-attach-point="signIn" class="esriCTBurgermenuStyle esriCTCalculatedBodyTextColorAsBorder esriCTPointerCursor" aria-label="Sign in" title="Sign in">
+            Sign In</div>
+        <div role="menuitem" tabindex="0" data-dojo-attach-point="signOut" class="esriCTHidden esriCTBurgermenuStyle esriCTCalculatedBodyTextColorAsBorder esriCTPointerCursor" aria-label="Sign out" title="Sign out">
+            Sign Out</div>
+        <div role="menuitem" tabindex="0" data-dojo-attach-point="help" class="esriCTBurgermenuStyle esriCTCalculatedBodyTextColorAsBorder esriCTPointerCursor" title="Help" aria-label="Help">Help</div>
+        <div role="menuitem" tabindex="0" data-dojo-attach-point="share" class="esriCTHidden esriCTBurgermenuStyle esriCTCalculatedBodyTextColorAsBorder esriCTPointerCursor" aria-label="Share" title="Share">Share</div>
+    </div>
+</div></div>
+    </div>
+    <!-- Load dojo configuration -->
+    <script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/jsapi_en-us.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/bootstrapper.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/svg.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/filters.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/svgext.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/template-config.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/template.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/sign-in.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/utils.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/warning.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/Portal.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/defaults.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/main.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/facebook-helper.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/twitter-helper.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/help.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/LocateButton.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/HomeButton.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/locator.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/colors.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/color.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/Circle.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/geometryEngine.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/draw.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/app-header.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/webmap-list.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/issue-wall.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/geo-form.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/my-issues.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/sidebar-content-controller.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/item-details-controller.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/map-search.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/BasemapGallery.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/Legend.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/ProjectParameters.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/AddressCandidate.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/_base.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/_toolbar.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/mobile-menu.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/bootstrapmap.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/item-list.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/main(1).js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/BasemapGallery_en-us.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/VectorTileLayerImpl.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/locator(1).js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/VectorTileLayerImpl_en-us.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/comment-form.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/NodeList-traverse.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/usng.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/resources.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/pbfDeps.js"></script><script type="text/javascript" charset="utf-8" src="./Crowdsource Reporter_files/pbfDeps_en-us.js"></script><script src="./Crowdsource Reporter_files/dojo-configuration.js" type="text/javascript"></script>
+    <!-- Load Different API's(Vendor)-->
+    <script type="text/javascript" src="./Crowdsource Reporter_files/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./Crowdsource Reporter_files/popper.min.js"></script>
+    <script type="text/javascript" src="./Crowdsource Reporter_files/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./Crowdsource Reporter_files/moment-with-locales.js"></script>
+    <script type="text/javascript" src="./Crowdsource Reporter_files/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./Crowdsource Reporter_files/jquery.bootstrap-touchspin.min.js"></script>
+    <script type="text/javascript" src="./Crowdsource Reporter_files/exif.js"></script>
+    <script type="text/javascript" src="./Crowdsource Reporter_files/3.41"></script>
+    <script type="text/javascript">
+        require([
+                "application/bootstrapper"
+        ], function (
+                BootStrapper
+            ) {
+            var bootStrapperObj = new BootStrapper();
+            bootStrapperObj.startup();
+        });
+    </script>
+
+
+<div id="dijit__WidgetsInTemplateMixin_1" title="Help" widgetid="dijit__WidgetsInTemplateMixin_1">
+    <div class="modal fade esriCTsignin" tabindex="-1" role="dialog" aria-hidden="true" panel="signin">
+        <div class="modal-dialog esriCTModelDialog" role="document">
+            <div class="modal-content esriCTBodyBackgroundColor">
+                <div class="modal-header esriCTHeaderBackgroundColor esriCTHeaderTextColor esriCTHeaderTextColorAsBorder">
+                    <h4 class="modal-title" aria-label="Help">Help</h4>
+                    <button type="button" class="esriCTCloseHelpWindow icon icon-close esriCTHeaderTextColor esriCTHeaderBackgroundColor esriCTClose close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                      </button>
+                </div>
+                <div class="modal-body esriCTBodyTextColor">
+                    <div class="esriCTModelBody"><p>Crowdsource Reporter is a configurable gallery application template that allows users to submit problems or observations. The application has been optimized for smartphones but is responsively designed to be used on smartphones, tablets, and desktop computers.</p><p>The Crowdsource Reporter application presents one or more maps that can be used to report a problem or observation. Users can anonymously submit new reports, review existing reports, and comment and vote on reports or observations submitted by other users. They also can authenticate with their social media or ArcGIS Online credentials and track the status of problems or observations they have reported.</p></div>
+                </div>
+                <div class="modal-footer esriCTHeaderTextColorAsBorder esriCTHidden">
+                    <button type="button" class="btn btn-default esriCTOkButton" data-dismiss="modal"></button>
+                    <button type="button" class="btn btn-default esriCTCancelButton" data-dismiss="modal"></button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</div><div style="display: none;"><div data-dojo-attach-point="signinOuterContainer" class="esriCTFullHeightWidth" id="dijit__WidgetsInTemplateMixin_0" widgetid="dijit__WidgetsInTemplateMixin_0">
+    <div class="esriCTSignInScreenBack">
+    </div>
+    <div class="esriCTSigninMainDiv" data-dojo-attach-point="signInMainContainer" style="color: rgb(255, 255, 255);">
+        <div class="esriCTSigninSplash">
+            <div data-dojo-attach-point="signinBgImage" class="esriCTSigninImageDiv" style="background-image: url(&quot;https://www.arcgis.com/apps/CrowdsourceReporter/images/signinbg_new.png&quot;); background-size: cover;">
+                <div>
+                    <div>
+                        <div tabindex="-1" data-dojo-attach-point="signinContainerName" class="esriCTSigninAppNameDiv">Crowdsource Reporter</div>
+                        <hr data-dojo-attach-point="signinCaptionSeparator" class="esriCTSigninOrLine esriCTHidden" width="250px" style="border-color: white;">
+                        <div tabindex="0" data-dojo-attach-point="signinContainerText" class="esriCTSigninAppCaptionDiv esriCTHidden">
+                        </div>
+                    </div>
+                    <div class="esriCTSigninCenterDiv" data-dojo-attach-point="signInGuestButtonContainer">
+                        <div class="esriCTSigninGapPosition">
+                            <div role="button" tabindex="0" data-dojo-attach-point="signinGuestButton" class="esriCTSigninGuestBtn esriCTIconsBackground" title="Sign in as a guest" aria-label="Sign in as a guest" style="background-color: rgb(153, 153, 153); border: 3px solid white; background-image: url(&quot;https://www.arcgis.com/apps/CrowdsourceReporter/images/guest-user.png&quot;);">
+                            </div>
+                            <div data-dojo-attach-point="signinGuestUser">Proceed as Guest</div>
+                        </div>
+                        <div data-dojo-attach-point="signinOrDiv" class="esriCTSigninOrDiv" style="background-image: url(&quot;https://www.arcgis.com/apps/CrowdsourceReporter/images/seperator.png&quot;);">
+                            <span class="esriCTEllipsis esriCTOrdiv" data-dojo-attach-point="signinOrText" title="Or" style="color: rgb(255, 255, 255); background-color: rgb(153, 153, 153); border: 2px solid white;">Or</span>
+                        </div>
+                    </div>
+                    <div class="esrictsigninSocialdiv">
+                        <div class="esriCTSocialMediaSigninContainer" data-dojo-attach-point="socialMediaSigninContainer">
+                            <div data-dojo-attach-point="signinOptions" class="esriCTSigninWithTxt">Sign in with:</div>
+                            <div>
+                                <div role="button" tabindex="0" data-dojo-attach-point="signinFBButton" class="esriCTSigninFBButton esriCTIconsBackground esriCTHidden" title="Sign in with Facebook" aria-label="Sign in with Facebook" style="background-color: rgb(153, 153, 153); border: 3px solid white; background-image: url(&quot;https://www.arcgis.com/apps/CrowdsourceReporter/images/facebook.png&quot;);">
+                                </div>
+                                <div role="button" tabindex="0" data-dojo-attach-point="signinTwitterButton" class="esriCTSigninTwitterButton esriCTIconsBackground esriCTHidden" title="Sign in with Twitter" aria-label="Sign in with Twitter" style="background-color: rgb(153, 153, 153); border: 3px solid white; background-image: url(&quot;https://www.arcgis.com/apps/CrowdsourceReporter/images/twitter.png&quot;);">
+                                </div>
+                                <div role="button" tabindex="0" data-dojo-attach-point="signinGPlusButton" class="esriCTSigninGPlusButton esriCTIconsBackground esriCTHidden" title="Sign in with Google+" aria-label="Sign in with Google+" style="background-color: rgb(153, 153, 153); border: 3px solid white; background-image: url(&quot;https://www.arcgis.com/apps/CrowdsourceReporter/images/googleplus.png&quot;);">
+                                </div>
+                                <div role="button" tabindex="0" data-dojo-attach-point="signinEsriButton" class="esriCTSigninEsriButton esriCTIconsBackground" title="Sign in with ArcGIS" aria-label="Sign in with ArcGIS" style="background-color: rgb(153, 153, 153); border: 3px solid white; background-image: url(&quot;https://www.arcgis.com/apps/CrowdsourceReporter/images/esri.png&quot;);">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="esriCTSigninHelpContainerDiv" data-dojo-attach-point="signinHelpContainer">
+                            <span role="link" tabindex="0" data-dojo-attach-point="signinHelpLink" class="esriCTSigninHelpLink" title="Help" aria-label="Help" style="border-bottom: 1px solid rgb(255, 255, 255);">Help</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div><div id="dijit__WidgetsInTemplateMixin_3" title="Help" widgetid="dijit__WidgetsInTemplateMixin_3">
+    <div class="modal fade esriCThelp" tabindex="-1" role="dialog" aria-hidden="true" panel="help">
+        <div class="modal-dialog esriCTModelDialog" role="document">
+            <div class="modal-content esriCTBodyBackgroundColor">
+                <div class="modal-header esriCTHeaderBackgroundColor esriCTHeaderTextColor esriCTHeaderTextColorAsBorder">
+                    <h4 class="modal-title" aria-label="Help">Help</h4>
+                    <button type="button" class="esriCTCloseHelpWindow icon icon-close esriCTHeaderTextColor esriCTHeaderBackgroundColor esriCTClose close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                      </button>
+                </div>
+                <div class="modal-body esriCTBodyTextColor">
+                    <div class="esriCTModelBody"><p>Crowdsource Reporter is a configurable gallery application template that allows users to submit problems or observations. The application has been optimized for smartphones but is responsively designed to be used on smartphones, tablets, and desktop computers.</p><p>The Crowdsource Reporter application presents one or more maps that can be used to report a problem or observation. Users can anonymously submit new reports, review existing reports, and comment and vote on reports or observations submitted by other users. They also can authenticate with their social media or ArcGIS Online credentials and track the status of problems or observations they have reported.</p></div>
+                </div>
+                <div class="modal-footer esriCTHeaderTextColorAsBorder esriCTHidden">
+                    <button type="button" class="btn btn-default esriCTOkButton" data-dismiss="modal"></button>
+                    <button type="button" class="btn btn-default esriCTCancelButton" data-dismiss="modal"></button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</div><div id="dijit__WidgetsInTemplateMixin_9" title="Select location for report" widgetid="dijit__WidgetsInTemplateMixin_9">
+    <div class="modal fade esriCTlocation" tabindex="-1" role="dialog" aria-hidden="true" panel="location">
+        <div class="modal-dialog esriCTModelDialog esriCTModelDialogWithButton" role="document">
+            <div class="modal-content esriCTBodyBackgroundColor">
+                <div class="modal-header esriCTHeaderBackgroundColor esriCTHeaderTextColor esriCTHeaderTextColorAsBorder">
+                    <h4 class="modal-title" aria-label="Select location for report">Select location for report</h4>
+                    <button type="button" class="esriCTCloseHelpWindow icon icon-close esriCTHeaderTextColor esriCTHeaderBackgroundColor esriCTClose close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                      </button>
+                </div>
+                <div class="modal-body esriCTBodyTextColor">
+                    <div class="esriCTModelBody">Are you sure you want to use image location ?</div>
+                </div>
+                <div class="modal-footer esriCTHeaderTextColorAsBorder">
+                    <button type="button" class="btn btn-default esriCTOkButton" data-dismiss="modal" aria-label="Yes">Yes</button>
+                    <button type="button" class="btn btn-default esriCTCancelButton" data-dismiss="modal" aria-label="No">No</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</div><div id="dijit__WidgetsInTemplateMixin_14" title="Select location for report" widgetid="dijit__WidgetsInTemplateMixin_14">
+    <div class="modal fade esriCTlocation" tabindex="-1" role="dialog" aria-hidden="true" panel="location">
+        <div class="modal-dialog esriCTModelDialog esriCTModelDialogWithButton" role="document">
+            <div class="modal-content esriCTBodyBackgroundColor">
+                <div class="modal-header esriCTHeaderBackgroundColor esriCTHeaderTextColor esriCTHeaderTextColorAsBorder">
+                    <h4 class="modal-title" aria-label="Select location for report">Select location for report</h4>
+                    <button type="button" class="esriCTCloseHelpWindow icon icon-close esriCTHeaderTextColor esriCTHeaderBackgroundColor esriCTClose close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                      </button>
+                </div>
+                <div class="modal-body esriCTBodyTextColor">
+                    <div class="esriCTModelBody">Are you sure you want to use image location ?</div>
+                </div>
+                <div class="modal-footer esriCTHeaderTextColorAsBorder">
+                    <button type="button" class="btn btn-default esriCTOkButton" data-dismiss="modal" aria-label="Yes">Yes</button>
+                    <button type="button" class="btn btn-default esriCTCancelButton" data-dismiss="modal" aria-label="No">No</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
